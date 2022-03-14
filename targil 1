@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod-bar
+  labels:
+    role: myrole
+spec:
+  containers:
+    - name: nginx-pod-bar
+      image: nginx:alpine
