@@ -1,3 +1,12 @@
+kubectl get nodes -o json | jq '.items[].spec.taints'
+kubectl taint nodes --all node-role.kubernetes.io/master-
+kubectl get nodes --show-labels |grep node-role
+kubectl get po -o wide
+
+
+
+
+
 apiVersion: v1
 kind: Pod
 metadata:
