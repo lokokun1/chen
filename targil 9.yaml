@@ -1,0 +1,2 @@
+kubectl run -n temp-bus finance --image=redis:alpine
+kubectl get pod -n temp-bus
