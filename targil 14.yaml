@@ -1,0 +1,5 @@
+kubectl run nginx-resolver --image=nginx
+kubectl expose pod nginx-resolver --name=nginx-resolver-service  --port=80 --target-port=80 --type=ClusterIP
+kubectl describe svc nginx-resolver-service
+kubectl get pod nginx-resolver -o wide
+kubectl logs test-nslookup
