@@ -1,0 +1,5 @@
+kubectl create deployment nginx-deploy --image=nginx:1.16 --replicas=1
+kubectl set image deployment/nginx-deploy nginx=nginx:1.17
+kubectl rollout history deploy nginx-deploy
+kubectl describe deploy nginx-deploy | grep -i image
+kubectl describe pod nginx-deploy-{pod id} | grep image
